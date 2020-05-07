@@ -41,3 +41,15 @@
 | loop through steps 5/6 until winner or loser. | 
 
 
+
+# diagram of the code 
+
+<img src="https://drive.google.com/file/d/1BhJGg4Prv4K_bbhyqU1NnH0b8bpa4VB2/view?usp=sharing">
+
+
+
+## Reference 
+-for logic understending https://www.youtube.com/watch?v=W0MxUHlZo6U
+- design reference https://www.youtube.com/watch?v=9MTR3V2XpRI
+- webpage to be use as a main resource https://www.youtube.com/watch?v=n_ec3eowFLQ
+
