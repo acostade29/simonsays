@@ -18,5 +18,26 @@
 
 
 
+#Structure of the Game 
+##HTML 
+
 <img src="images /IMG_1485.jpg">
+
+##css
+
+
 <img src="images /IMG_1486.jpg">
+
+
+## JS Structure game 
+
+| Student will have to create in JS: |
+|---|
+| Step 1 :  put 4 color elements on the screen|
+| step 2:  add event listeners to each |
+| step 4:  play the first one or two colors in sequence (store in an array) |
+| step 5:  get player entry (store in array)|
+| step 6:  if solution array === player array, send congrats message and play element 3 of solution array|
+| loop through steps 5/6 until winner or loser. | 
+
+
