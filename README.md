@@ -1,6 +1,12 @@
 # Simon-says-firts-project-
 #Drawings of the game.
+
+
 <img src="images /IMG_1484.jpg">
+
+
+
+
 |Rules of the game: |
 |---|
 | Inital game will start with 4 panels with different colors. with a start button.  |
