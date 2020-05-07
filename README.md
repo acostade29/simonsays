@@ -44,7 +44,7 @@
 
 # diagram of the code 
 
-<img src="https://drive.google.com/file/d/1BhJGg4Prv4K_bbhyqU1NnH0b8bpa4VB2/view?usp=sharing">
+<a href="https://app.diagrams.net/#G1BhJGg4Prv4K_bbhyqU1NnH0b8bpa4VB2">Diagram structure of the game code</a>
 
 
 
