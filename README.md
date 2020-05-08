@@ -53,3 +53,4 @@
 - design reference https://www.youtube.com/watch?v=9MTR3V2XpRI
 - webpage to be use as a main resource https://www.youtube.com/watch?v=n_ec3eowFLQ
 
+# simonsays
