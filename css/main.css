@@ -11,6 +11,13 @@ h1{
   display: inline-block;
   height: 100px;
   width: 100px;
+  cursor: pointer;
+  }
+
+
+  /* this will allow to give a background to the panel once is selected */
+  .panel:hover {
+    border: 1px solid deeppink;
   }
 
 
@@ -82,3 +89,7 @@ h1{
 
       
 
+/*this is the flash to activate the buttons
+ active {
+  background-color: aqua;
+} */
