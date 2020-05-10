@@ -1,5 +1,84 @@
 body { 
-    background-color: blueviolet;
+    background-color: black;    
+    text-align: center;
+    margin-top: 200px;
 }
 
+h1{
+  color: aqua;
+}
+.panel {
+  display: inline-block;
+  height: 100px;
+  width: 100px;
+  }
+
+
+
+.blue {
+    width: 100px;
+    height: 100px;
+    background: blue;
+  }
+
+
+.green{
+    width: 100px;
+    height: 100px;
+    background: greenyellow;
+  }
+
+
+
+.yellow{
+    width: 100px;
+    height: 100px;
+    background: yellow;
+  }
+
+
+
+.red {
+  
+    width: 100px;
+    height: 100px;
+    background: red;
+  }
+
+
+
+.purple {
+    width: 100px;
+    height: 100px;
+    background: purple;
+  }
+
+
+
+.gray{
+    width: 100px;
+    height: 100px;
+    background: gray;
+  }
+
+
+
+
+.orange {
+    width: 100px;
+    height: 100px;
+    background: orange;
+  }
+
+
+
+
+.white{
+
+    width: 100px;
+    height: 100px;
+    background:white;
+  }
+
+      
 
