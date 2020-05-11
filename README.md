@@ -49,9 +49,11 @@
 
 
 ## Reference 
--for logic understending https://www.youtube.com/watch?v=W0MxUHlZo6U
+- for logic understending https://www.youtube.com/watch?v=W0MxUHlZo6U
 - design reference https://www.youtube.com/watch?v=9MTR3V2XpRI
 - webpage to be use as a main resource https://www.youtube.com/watch?v=n_ec3eowFLQ
+- shapes css https://css-tricks.com/quick-css-trick-how-to-center-an-object-exactly-in-the-center/
+- definitions https://p5js.org/
 
 # simonsays
 # simonsays

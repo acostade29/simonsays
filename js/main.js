@@ -1,12 +1,43 @@
 /*------Constants------*/
 // create panels colors as a const  
 //colors: res, yellow, blue, green, orange, purple. const variables 
-// create a button for each level
+
+
+const panel = document.getElementsByClassName('panel');
+const blue = document.getElementsByClassName('blue');
+const red = document.getElementsByClassName('red');
+const yellow = document.getElementsByClassName('yellow');
+const green = document.getElementsByClassName('green');
+const white = document.getElementsByClassName('white');
+const gray = document.getElementsByClassName('gray');
+const purple = document.getElementsByClassName('purple');
+const orange = document.getElementsByClassName('orange');
+
+
+//cached elements
+// create the document element by id for enter name, start game, select color
+
+const messageEl = document.getElementById("message");
+const messageInput = document.getElementById('inputMessage');
+const messageBtn = document.getElementById('messageButton');
+
+
+//to select colors of the panels once the game start and start button 
+const ColorSelectionBtn = document.getElementsByClassName("panel")
+const startGame = document.getElementById("start");
+
+//event handler
+// write a function that change the H1 TITLE to the name of the user once the included the name to Welcome + name
+messageBtn.addEventListener('click',function() {
+    messageEl.innerText = `Welcome ${messageInput.value}` ;
+})
+//write the init function to random select colors sequence
+//write a function to hide the extra colors and only appears after x amount of sequence is comprete 
 
 
 
 /*------Variables------*/
-//level dificulty attached to level difficulty button
+//level of difficulty will increase as the game goes 
 //
 // array for storage sequence 
 
