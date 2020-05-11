@@ -13,13 +13,14 @@ h1{
   height: 100px;
   width: 100px;
   cursor: pointer;
+  grid-template-rows: 8,20vmin;
   }
 
   
 
 
-  /* this will allow to give a background to the panel once is selected */
-  /* .panel:hover {
+  /* this will allow to give a background to the panel once is selected 
+   .panel:hover {
     border: 1px solid 
   } */
 
@@ -27,7 +28,7 @@ h1{
 
 .blue {
     border-radius: 50%;
-    background: black;
+    /* background: black; */
     margin: 50px;
     border: 5px solid rgb(45, 125, 245);
   }
@@ -37,28 +38,36 @@ h1{
 
 .green{
     border-radius: 50%;
-    background: black;
+    /* background: black; */
     margin: 50px;
     border: 5px solid rgb(45, 245, 135);
   }
-
+  .green:hover {
+    border: 5px solid green;
+  }
 
 
 .yellow{
     border-radius: 50%;
-    background: black;
+    /* background: black; */
     margin: 50px;
     border: 5px solid rgb(208, 245, 45);
   }
-  
+  .yellow:hover {
+    border: 5px solid rgb(138, 138, 23);
+  }
 
 
 
 .red {
     border-radius: 50%;
-    background: black;
+    /* background: black; */
     margin: 50px;
     border: 5px solid rgb(235, 38, 38);
+  }
+
+  .red:hover {
+    border: 5px solid rgb(114, 12, 12);
   }
   
 
@@ -66,41 +75,54 @@ h1{
 /* Additional Color to add for difficulties */
 .purple {
     border-radius: 50%;
-    background: black;
+    /* background: black; */
     margin: 50px;
     border: 5px solid rgb(219, 25, 203);
+  }
+
+  .purple:hover {
+    border: 5px solid rgb(97, 13, 97);
   }
 
 
 
 .gray{
     border-radius: 50%;
-    background: black;
+    /* background: black; */
     margin: 50px;
     border: 5px solid rgb(189, 208, 236);
   }
-  
+  .gray:hover {
+    border: 5px solid rgb(86, 86, 121);
+  }
 
 
 
 
 .orange {
     border-radius: 50%;
-    background: black;
+    /* background: black; */
     margin: 50px;
     border: 5px solid rgb(243, 172, 19);
   }
-
+  .orange:hover {
+    border: 5px solid rgb(197, 70, 11);
+  }
 
 
 
 .teal{
     border-radius: 50%;
-    background: black;
+    /* background: black; */
     margin: 50px;
     border: 5px solid teal;
   }
+
+  .teal:hover {
+    border: 5px solid rgb(46, 192, 17);
+  }
   
+ 
 
 
   .button {
@@ -112,9 +134,9 @@ h1{
   } */
       
 
-flash {
-  background: white;
-}
+/* .flash {
+  background-color: white;
+} */
   
 
 /*this is the flash to activate the buttons

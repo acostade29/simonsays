@@ -54,6 +54,7 @@
 - webpage to be use as a main resource https://www.youtube.com/watch?v=n_ec3eowFLQ
 - shapes css https://css-tricks.com/quick-css-trick-how-to-center-an-object-exactly-in-the-center/
 - definitions https://p5js.org/
+- how to use the promise function for flash the elements. https://editor.p5js.org/talkscheap/sketches/SJR8rSXlm / https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise /https://www.youtube.com/watch?v=vn3tm0quoqE  / https://www.youtube.com/watch?v=PoRJizFvM7s
 
 # simonsays
 # simonsays
