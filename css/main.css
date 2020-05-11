@@ -5,7 +5,7 @@ body {
 }
 
 h1{
-  color: aqua;
+  color: whitesmoke;
 }
 .panel {
   display: inline-block;
@@ -16,17 +16,20 @@ h1{
 
 
   /* this will allow to give a background to the panel once is selected */
-  .panel:hover {
-    border: 1px solid deeppink;
-  }
+  /* .panel:hover {
+    border: 1px solid 
+  } */
 
 
 
 .blue {
     width: 100px;
     height: 100px;
-    background: blue;
+    border-radius: 50%;
+    
+    background: black;
     margin: 10px;
+    border: 5px solid rgb(45, 125, 245);
   }
 
 
@@ -87,17 +90,17 @@ h1{
 
 
 
-.white{
+.teal{
 
     width: 100px;
     height: 100px;
-    background:white;
+    background:teal;
     margin: 10px;
   } 
 
 
-  button {
-    text-align: justify;
+  .button {
+    text-align: center;
   }
       
 

@@ -10,7 +10,7 @@ const yellow = document.getElementsByClassName('yellow');
 const green = document.getElementsByClassName('green');
 
 
-const white = document.getElementsByClassName('white');
+const teal = document.getElementsByClassName('teal');
 const gray = document.getElementsByClassName('gray');
 const purple = document.getElementsByClassName('purple');
 const orange = document.getElementsByClassName('orange');
@@ -18,8 +18,7 @@ const orange = document.getElementsByClassName('orange');
 
 //sequence const
 
-const sequence = [ blue,red, yellow,green,white,gray,purple,orange
-
+const sequence = [ blue,red, yellow,green,teal,gray,purple,teal
 ]
 
 
@@ -52,7 +51,8 @@ messageBtn.addEventListener('click',function() {
 
 /*------Variables------*/
 //level of difficulty will increase as the game goes 
-//
+
+
 // array for storage sequence 
 
 
