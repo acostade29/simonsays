@@ -8,11 +8,14 @@ h1{
   color: whitesmoke;
 }
 .panel {
+  position: relative;
   display: inline-block;
   height: 100px;
   width: 100px;
   cursor: pointer;
   }
+
+  
 
 
   /* this will allow to give a background to the panel once is selected */
@@ -23,86 +26,96 @@ h1{
 
 
 .blue {
-    width: 100px;
-    height: 100px;
     border-radius: 50%;
-    
     background: black;
-    margin: 10px;
+    margin: 50px;
     border: 5px solid rgb(45, 125, 245);
   }
-
+.blue:hover {
+  border: 5px solid blue;
+}
 
 .green{
-    width: 100px;
-    height: 100px;
-    background: greenyellow;
-    margin: 10px;
+    border-radius: 50%;
+    background: black;
+    margin: 50px;
+    border: 5px solid rgb(45, 245, 135);
   }
 
 
 
 .yellow{
-    width: 100px;
-    height: 100px;
-    background: yellow;
-    margin: 10px;
+    border-radius: 50%;
+    background: black;
+    margin: 50px;
+    border: 5px solid rgb(208, 245, 45);
   }
+  
 
 
 
 .red {
-  
-    width: 100px;
-    height: 100px;
-    background: red;
-    margin: 10px;
+    border-radius: 50%;
+    background: black;
+    margin: 50px;
+    border: 5px solid rgb(235, 38, 38);
   }
+  
 
 
 /* Additional Color to add for difficulties */
 .purple {
-    width: 100px;
-    height: 100px;
-    background: purple;
-    margin: 10px;
+    border-radius: 50%;
+    background: black;
+    margin: 50px;
+    border: 5px solid rgb(219, 25, 203);
   }
 
 
 
 .gray{
-    width: 100px;
-    height: 100px;
-    background: gray;
-    margin: 10px;
+    border-radius: 50%;
+    background: black;
+    margin: 50px;
+    border: 5px solid rgb(189, 208, 236);
   }
+  
 
 
 
 
 .orange {
-    width: 100px;
-    height: 100px;
-    background: orange;
-    margin: 10px;
+    border-radius: 50%;
+    background: black;
+    margin: 50px;
+    border: 5px solid rgb(243, 172, 19);
   }
 
 
 
 
 .teal{
-
-    width: 100px;
-    height: 100px;
-    background:teal;
-    margin: 10px;
-  } 
+    border-radius: 50%;
+    background: black;
+    margin: 50px;
+    border: 5px solid teal;
+  }
+  
 
 
   .button {
     text-align: center;
   }
+
+  /* .message hover {
+    border: 1px solid blueviolet;
+  } */
       
+
+flash {
+  background: white;
+}
+  
 
 /*this is the flash to activate the buttons
  active 
