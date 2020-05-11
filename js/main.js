@@ -3,74 +3,74 @@
 //colors: res, yellow, blue, green, orange, purple. const variables 
 
 
-const panel = document.querySelector('panel');
-const blue = document.querySelector('blue');
-const red = document.querySelector('red');
-const yellow = document.querySelector('yellow');
-const green = document.querySelector('green');
+const panel = document.querySelector('.panel');
+const blue = document.querySelector('.blue');
+const red = document.querySelector('.red');
+const yellow = document.querySelector('.yellow');
+const green = document.querySelector('.green');
 
 
-const teal = document.querySelector('teal');
-const gray = document.querySelector('gray');
-const purple = document.querySelector('purple');
-const orange = document.querySelector('orange');
+const teal = document.querySelector('.teal');
+const gray = document.querySelector('.gray');
+const purple = document.querySelector('.purple');
+const orange = document.querySelector('.orange');
 
-
-const flash =document.querySelectorAll(panel);
 
 //sequence const creating and array of color.
 
-const lightsequence = [ 
-    { color: 'blue',time:1000},
-    { color: 'yellow',time:1000},
-    { color: 'green',time:1000},
-    { color: 'teal',time:1000},
-    { color: 'gray',time:1000},
-    { color: 'purple',time:1000},
-    { color: 'orange',time:1000},
-    { color: 'gray',time:1000}
-]
+const randomPanels = () => {
+const panels = [
+blue,
+green,
+yellow,
+red,
+gray,
+teal,
+orange,
+purple,
+teal
+];
 
-const gameOn = document.querySelectorAll('panel');
+return panels[parseInt(Math.random() * panels.length)];
+};
 
-
-// //variable to track the current light 
-// let curLightIdx = -1;
-
-// function renderLight(cb) {
-//     // Turn all lights off
-//     lightEls.forEach(el => el.style.backgroundColor = 'black');
-//     lightEls[curLightIdx].style.backgroundColor = lightSequence[curLightIdx].color;
-//     // Invoke the callback when this light's time has expired
-//     setTimeout(cb, lightSequence[curLightIdx].time);
-//   }
-  
-//   function renderNextLight() {
-//     // Increment and reset to zero when 3 is reached
-//     curLightIdx = ++curLightIdx % 8;
-//     renderLight(renderNextLight);
-//   }
-  
-//   // Make it start!
-//   renderNextLight();
+const sequence = [ 
+randomPanels(),
+randomPanels(),
+randomPanels(),
+randomPanels(),
+randomPanels(),
+randomPanels(),
+randomPanels(),
+randomPanels()
+];
 
 
-// one function that can work but still need to understand. flash function  with a promise event loop with async function with a wait time 
-// const flash = panel => {
-// return new Promise ((resolve, reject) =>  {
-//     panel.querySelector += 'flash';
-//     setTimeout(() => {
-//         panel.className =panel.querySelector.replace('flash','');
-//         resolve();
-//     }, 1000)
-// });
-// };
+const flash = panel => {
+    return new Promise((resolve,reject) => {
+        panel.className += 'active';
+        setTimeout(() => {
+        panel.className.replace(
+            'active',
+            ''
+        );
+        setTimeout(() => {
+    resolve();
+        },250);
+}, 1000);
+});
+};
 
-// const main =async () => {
-//     for (const panel of sequence) {
-//         await flash(panel);
-//     }
-// };
+const main= async () => {
+    for (let panel of sequence) {
+        await flash(panel)
+    }
+    flash ()
+};
+
+main();
+
+
 
 
   
