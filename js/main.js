@@ -1,81 +1,3 @@
-/*------Constants------*/
-// create panels colors as a const  
-//colors: res, yellow, blue, green, orange, purple. const variables 
-
-
-const panel = document.querySelector('.panel');
-const blue = document.querySelector('.blue');
-const red = document.querySelector('.red');
-const yellow = document.querySelector('.yellow');
-const green = document.querySelector('.green');
-
-
-const teal = document.querySelector('.teal');
-const gray = document.querySelector('.gray');
-const purple = document.querySelector('.purple');
-const orange = document.querySelector('.orange');
-
-
-//sequence const creating and array of color.
-
-const randomPanels = () => {
-const panels = [
-blue,
-green,
-yellow,
-red,
-gray,
-teal,
-orange,
-purple,
-teal
-];
-
-return panels[parseInt(Math.random() * panels.length)];
-};
-
-const sequence = [ 
-randomPanels(),
-randomPanels(),
-randomPanels(),
-randomPanels(),
-randomPanels(),
-randomPanels(),
-randomPanels(),
-randomPanels()
-];
-
-
-const flash = panel => {
-    return new Promise((resolve,reject) => {
-        panel.className += 'active';
-        setTimeout(() => {
-        panel.className.replace(
-            'active',
-            ''
-        );
-        setTimeout(() => {
-    resolve();
-        },250);
-}, 1000);
-});
-};
-
-const main= async () => {
-    for (let panel of sequence) {
-        await flash(panel)
-    }
-    flash ()
-};
-
-main();
-
-
-
-
-  
-
-
 
 
 
@@ -89,41 +11,98 @@ const messageBtn = document.getElementById('messageButton');
 
 
 //to select colors of the panels once the game start and start button 
-const ColorSelectionBtn = document.getElementsByClassName("panel")
+const ColorSelectionBtn = document.getElementsByClassName("panel");
 const startGame = document.getElementById("start");
 
 //event handler
 // write a function that change the H1 TITLE to the name of the user once the included the name to Welcome + name
 messageBtn.addEventListener('click',function() {
-    messageEl.innerText = `Welcome ${messageInput.value}` ;
+    messageEl.innerText = `Welcome ${messageInput.value}`;
 })
-//write the init function to random select colors sequence
-//write a function to hide the extra colors and only appears after x amount of sequence is comprete 
 
 
+//assign a color lookup to numbers//
+let colorLookup ={
+    1:'Red',
+    2:'Blue',
+    3:'Yellow',
+    4:'Purple',
+    5:'Green',
+    6:'Gray',
+    7:'Orange',
+    8:'teal'
+}
 
-/*------Variables------*/
-//level of difficulty will increase as the game goes 
+//create a sequence 
+let sequence = [1,5,4,6,2,3,7,8,1];
+randonSequence = Math.random(sequence);
+
+//create the  elements for each color 
+
+const blue = document.querySelector('blueButton');
+const red = document.querySelector('redButton');
+const yellow = document.querySelector('yellowButton');
+const green = document.querySelector('greenButton');
+const teal = document.querySelector('tealButton');
+const gray = document.querySelector('grayButton');
+const purple = document.querySelector('purpleButton');
+const orange = document.querySelector('orangeButton');
 
 
-// array for storage sequence 
+//setting timer  and function flash  
+let timer = 1000;
+function flash(){
+    randonSequence.forEach(function(color) {
+        timer += 1000;
+        setTimeout(() => {
+            // function to turn on/off background colors
+            changeColor(colorLookup[color])
+        }, timer);
+        setTimeout(() => {
+            // function to turn on/off background colors
+            colorReset();
+        }, timer + 500);  
+    })
+}    
+flash();
+function changeColor(color) {
+    if (color === 'Red') {
+        redButton.style.backgroundColor = 'white'
+    }
+    if (color === 'Yellow') {
+        yellowButton.style.backgroundColor = 'white'
+    }
+    if (color === 'Green') {
+        greenButton.style.backgroundColor = 'white'
+    }
+    if (color === 'Blue') {
+        blueButton.style.backgroundColor = 'white'
+    }
+
+    if (color === 'Gray') {
+        grayButton.style.backgroundColor = 'white'
+    }
+    if (color === 'Purple') {
+        purpleButton.style.backgroundColor = 'white'
+    }
+    if (color === 'Teal') {
+        tealButton.style.backgroundColor = 'white'
+    }
+    if (color === 'Orange') {
+        orangeButton.style.backgroundColor = 'white'
+    }
+}
+
+//create a fucntion to reset the color to original color 
+function colorReset() {
+    redButton.style.backgroundColor = 'red';
+    greenButton.style.backgroundColor = 'green';
+    yellowButton.style.backgroundColor = 'yellow';
+    blueButton.style.backgroundColor = 'blue';
+    grayButton.style.backgroundColor = 'gray';
+    purpleButton.style.backgroundColor = 'purple';
+    tealButton.style.backgroundColor = 'teal';
+    orangeButton.style.backgroundColor = 'orange';
+}
 
 
-
-/*------Functions------*/
-
-//init function 
-//random selection of button color.
-// create a sequence function  with the variable to storage panel. 
-//flash  function and add the time out for memorization. 
-//flash function for user select the panel. 
-
-
-// call back function that will let user to see if they click on the right panel of color else message game over. 
-
-
-//render function will group the game to start over 
-
-/*------Cached Element References------*/
-
-/*------Event Listeners------*/

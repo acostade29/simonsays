@@ -7,140 +7,135 @@ body {
 h1{
   color: whitesmoke;
 }
-.panel {
-  position: relative;
-  display: inline-block;
-  height: 100px;
-  width: 100px;
-  cursor: pointer;
-
-  }
 
 
 
 
-
-.blue {
+#blueButton {
     border-radius: 50%;
-    /* background: black; */
     margin: 50px;
     border: 5px solid rgb(45, 125, 245);
+    width: 100px;
+    height: 100px;
+    background-color: blue;
    
   }
-.blue:hover {
+#blueButton:hover {
   border: 5px solid blue;
 }
 
-.green{
+#greenButton{
     border-radius: 50%;
-    /* background: black; */
     margin: 50px;
     border: 5px solid rgb(45, 245, 135);
+    width: 100px;
+    height: 100px;
+    background-color: green;
 
   }
-  .green:hover {
+  #greenButton:hover {
     border: 5px solid green;
   }
 
 
-.yellow{
+#yellowButton{
     border-radius: 50%;
-    /* background: black; */
     margin: 50px;
-    border: 5px solid rgb(208, 245, 45);
+    border: 5px solid #d0f52d;
+    width: 100px;
+    height: 100px;
+    background-color: yellow;
     
   }
-  .yellow:hover {
+  #yellowButton:hover {
     border: 5px solid rgb(138, 138, 23);
   }
 
 
 
-.red {
+#redButton{
     border-radius: 50%;
-    /* background: black; */
     margin: 50px;
-    border: 5px solid rgb(235, 38, 38);
+    border: 5px solid rgb(245, 148, 148);
+    width: 100px;
+    height: 100px;
+    background-color: red;
     
   }
 
-  .red:hover {
+  #redButton:hover {
     border: 5px solid rgb(114, 12, 12);
   }
   
 
 
 /* Additional Color to add for difficulties */
-.purple {
+
+#purpleButton{
     border-radius: 50%;
-    /* background: black; */
+    
     margin: 50px;
     border: 5px solid rgb(219, 25, 203);
+    width: 100px;
+    height: 100px;
+    background-color: purple;
     
   }
 
-  .purple:hover {
+  #purplebButton:hover {
     border: 5px solid rgb(97, 13, 97);
   }
 
 
 
-.gray{
+#grayButton{
     border-radius: 50%;
-    /* background: black; */
+    
     margin: 50px;
     border: 5px solid rgb(189, 208, 236);
+    width: 100px;
+    height: 100px;
+    background-color: grey;
     
   }
-  .gray:hover {
+  #grayButton:hover {
     border: 5px solid rgb(86, 86, 121);
   }
 
 
 
 
-.orange {
+#orangeButton {
     border-radius: 50%;
-    /* background: black; */
+ 
     margin: 50px;
-    border: 5px solid rgb(243, 172, 19);
+    border: 5px solid rgb(241, 172, 21);
+    width: 100px;
+    height: 100px;
+    background-color: orange;
     
   }
-  .orange:hover {
+  #orangeButton:hover {
     border: 5px solid rgb(197, 70, 11);
   }
 
 
 
-.teal{
+#tealButton{
     border-radius: 50%;
-    /* background: black; */
     margin: 50px;
-    border: 5px solid teal;
+    border: 5px solid rgb(35, 224, 224);
+    width: 100px;
+    height: 100px;
+    background-color: teal;
     
   }
 
-  .teal:hover {
+  #tealButton:hover {
     border: 5px solid rgb(46, 192, 17);
   }
   
  
 
 
-  .button {
-    text-align: center;
-  }
 
-  /* .message hover {
-    border: 1px solid blueviolet;
-  } */
-      
-
-.active {
-  background-color: white;
-}
-  
-
-/*this is the flash to activate the buttons
- active 
-  background-color: aqua;} */
