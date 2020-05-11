@@ -26,6 +26,7 @@ h1{
     width: 100px;
     height: 100px;
     background: blue;
+    margin: 10px;
   }
 
 
@@ -33,6 +34,7 @@ h1{
     width: 100px;
     height: 100px;
     background: greenyellow;
+    margin: 10px;
   }
 
 
@@ -41,6 +43,7 @@ h1{
     width: 100px;
     height: 100px;
     background: yellow;
+    margin: 10px;
   }
 
 
@@ -50,14 +53,16 @@ h1{
     width: 100px;
     height: 100px;
     background: red;
+    margin: 10px;
   }
 
 
-
+/* Additional Color to add for difficulties */
 .purple {
     width: 100px;
     height: 100px;
     background: purple;
+    margin: 10px;
   }
 
 
@@ -66,6 +71,7 @@ h1{
     width: 100px;
     height: 100px;
     background: gray;
+    margin: 10px;
   }
 
 
@@ -75,6 +81,7 @@ h1{
     width: 100px;
     height: 100px;
     background: orange;
+    margin: 10px;
   }
 
 
@@ -85,11 +92,15 @@ h1{
     width: 100px;
     height: 100px;
     background:white;
-  }
+    margin: 10px;
+  } 
 
+
+  button {
+    text-align: justify;
+  }
       
 
 /*this is the flash to activate the buttons
- active {
-  background-color: aqua;
-} */
+ active 
+  background-color: aqua;} */

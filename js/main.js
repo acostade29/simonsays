@@ -8,10 +8,24 @@ const blue = document.getElementsByClassName('blue');
 const red = document.getElementsByClassName('red');
 const yellow = document.getElementsByClassName('yellow');
 const green = document.getElementsByClassName('green');
+
+
 const white = document.getElementsByClassName('white');
 const gray = document.getElementsByClassName('gray');
 const purple = document.getElementsByClassName('purple');
 const orange = document.getElementsByClassName('orange');
+
+
+//sequence const
+
+const sequence = [ blue,red, yellow,green,white,gray,purple,orange
+
+]
+
+
+
+
+
 
 
 //cached elements
