@@ -11,13 +11,12 @@ const messageBtn = document.getElementById('messageButton');
 
 
 //to select colors of the panels once the game start and start button 
-const ColorSelectionBtn = document.getElementsByClassName("panel");
-const startGame = document.getElementById("start");
+
 
 //event handler
 // write a function that change the H1 TITLE to the name of the user once the included the name to Welcome + name
 messageBtn.addEventListener('click',function() {
-    messageEl.innerText = `Welcome ${messageInput.value}`;
+    messageEl.innerText = `Welcome ${messageInput.value}!`;
 })
 
 
@@ -33,9 +32,28 @@ let colorLookup ={
     8:'teal'
 }
 
-//create a sequence 
-let sequence = [1,5,4,6,2,3,7,8,1];
-randonSequence = Math.random(sequence);
+
+
+//create a sequence [1,5,4,6,2,3,7,8,1];
+ let arry = [1,2,3,4,5,6,7,8];
+
+ //the sequence is not random we need to shuffle with a shuffle function 
+ let arrayshuffle = function(arr) {
+    let newPos,
+    temp; 
+    for (let i = arr.length -1; i > 0; i--) {
+    newPos = Math.floor(Math.random() * (i + 1));   
+    temp = arr[i];
+    arr[i] = arr[newPos];
+    arr[newPos] = temp;
+    }
+    return arr;
+ };
+
+ 
+ var newSquence = arrayshuffle(arry);
+
+
 
 //create the  elements for each color 
 
@@ -52,7 +70,7 @@ const orange = document.querySelector('orangeButton');
 //setting timer  and function flash  
 let timer = 1000;
 function flash(){
-    randonSequence.forEach(function(color) {
+    newSquence.forEach(function(color) {
         timer += 1000;
         setTimeout(() => {
             // function to turn on/off background colors
@@ -64,6 +82,8 @@ function flash(){
         }, timer + 500);  
     })
 }    
+
+
 flash();
 function changeColor(color) {
     if (color === 'Red') {
@@ -104,5 +124,14 @@ function colorReset() {
     tealButton.style.backgroundColor = 'teal';
     orangeButton.style.backgroundColor = 'orange';
 }
+
+
+//create a render function that repeat everything. 
+
+ 
+for ( var K = 0; K < 30; K ++) {
+    flash()
+}
+
 
 
