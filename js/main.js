@@ -13,7 +13,7 @@ messageBtn.addEventListener('click',function() {
 })
 
 
-// defined variables
+// define variables
 let strict = false;
 let noice = true;
 let on = false;
@@ -40,119 +40,6 @@ const strictButton = document.querySelector("#Strict")
 const onButton = document.querySelector('#on')
 
 
-//assign a color lookup to numbers//
-let colorLookup ={
-    1:'Red',
-    2:'Blue',
-    3:'Yellow',
-    4:'Purple',
-    5:'Green',
-    6:'Gray',
-    7:'Orange',
-    8:'teal'
-}
-
-//create a sequence [1,5,4,6,2,3,7,8,1];
-let arry = [0,1,2,3,4,5,6,7,8,
-    1,2,3,4,5,6,7,8,
-    1,2,3,4,5,6,7,8,
-    1,2,3,4,5,6,7,8,
-    1,2,3,4,5,6,7,8,
-    1,2,3,4,5,6,7,8];
-
-
- 
-
-
-
-//setting timer  and function flash  
-let timer = 1000;
-function flash(){
-    newSquence.forEach(function(color) {
-        timer += 1000;
-        setTimeout(() => {
-            // function to turn on/off background colors
-            changeColor(colorLookup[color])
-        }, timer);
-        setTimeout(() => {
-            // function to turn on/off background colors
-            colorReset();
-        }, timer + 500);  
-    })
-}    
-
-
-
- //the sequence is not random we need to shuffle with a shuffle function 
- let arrayshuffle = function(arr) {
-    let newPos,
-    temp; 
-    for (let i = arr.length -1; i > 0; i--) {
-    newPos = Math.floor(Math.random() * (i + 1));   
-    temp = arr[i];
-    arr[i] = arr[newPos];
-    arr[newPos] = temp;
-    }
-    return arr;
- };
-
- 
- var newSquence = arrayshuffle(arry);
-//give the flash a background color of white 
-
- flash();
- function changeColor(color) {
-     if (color === 'Red') {
-         redButton.style.backgroundColor = 'white'
-     }
-     if (color === 'Yellow') {
-         yellowButton.style.backgroundColor = 'white'
-     }
-     if (color === 'Green') {
-         greenButton.style.backgroundColor = 'white'
-     }
-     if (color === 'Blue') {
-         blueButton.style.backgroundColor = 'white'
-     }
- 
-     if (color === 'Gray') {
-         grayButton.style.backgroundColor = 'white'
-     }
-     if (color === 'Purple') {
-         purpleButton.style.backgroundColor = 'white'
-     }
-     if (color === 'Teal') {
-         tealButton.style.backgroundColor = 'white'
-     }
-     if (color === 'Orange') {
-         orangeButton.style.backgroundColor = 'white'
-     }
- }
- 
- //create a fucntion to reset the color to original color 
- function colorReset() {
-     redButton.style.backgroundColor = 'red';
-     greenButton.style.backgroundColor = 'green';
-     yellowButton.style.backgroundColor = 'yellow';
-     blueButton.style.backgroundColor = 'blue';
-     grayButton.style.backgroundColor = 'gray';
-     purpleButton.style.backgroundColor = 'purple';
-     tealButton.style.backgroundColor = 'teal';
-     orangeButton.style.backgroundColor = 'orange';
- }
- 
-
-
-
-
-
-
-
-
-
-
-
-
 // if the strict Button is check the strick funtion will be true or activated.  
 strictButton.addEventListener('click', (event) => {
     if (strictButton.checked == true) {
@@ -170,7 +57,6 @@ strictButton.addEventListener('click', (event) => {
        } else {
            on = false;
            turnCounter.innerHTML = "--";
-           clearColor();
            clearInterval(intervalId)
        }
    });
@@ -179,19 +65,132 @@ strictButton.addEventListener('click', (event) => {
    
    startBtn.addEventListener('click',(event) => {
     if (on || win) {
-    play();
-    }
-   })
+    flash();
+    } else if (
+      on = false) { clearInterval(flash())
+      }
+   });
    
    function play() {
        win = false;
        Order =[];
        player = [];
-       flash = [0];
+       flash = [];
        intervalId = 0;
        turn = 1;
        turnCounter.innerHTML = 1;
        good =true;
-       
-   }
    
+  
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// this way will show you a second option to create the game. however it only flash once the press start button and the on button is on 
+
+// //assign a color lookup to numbers//
+// let colorLookup ={
+//     1:'Red',
+//     2:'Blue',
+//     3:'Yellow',
+//     4:'Purple',
+//     5:'Green',
+//     6:'Gray',
+//     7:'Orange',
+//     8:'teal'
+// }
+
+// //create a sequence [1,5,4,6,2,3,7,8,1];
+// let arry = [0,1,2,];
+
+
+
+//setting timer  and function flash  
+// let timer = 1000;
+// function flash(){
+//     newSquence.forEach(function(color) {
+//         timer += 1000;
+//         setTimeout(() => {
+//             // function to turn on/off background colors
+//             changeColor(colorLookup[color])
+//         }, timer);
+//         setTimeout(() => {
+//             // function to turn on/off background colors
+//             colorReset();
+//         }, timer + 500);  
+//     })
+// }    
+
+//  //the sequence is not random we need to shuffle with a shuffle function 
+//  let arrayshuffle = function(arr) {
+//     let newPos,
+//     temp; 
+//     for (let i = arr.length -1; i > 0; i--) {
+//     newPos = Math.floor(Math.random() * (i + 1));   
+//     temp = arr[i];
+//     arr[i] = arr[newPos];
+//     arr[newPos] = temp;
+//     }
+//     return arr;
+//  };
+
+ 
+//  var newSquence = arrayshuffle(arry);
+// //give the flash a background color of white 
+
+// //  flash();
+//  function changeColor(color) {
+//      if (color === 'Red') {
+//          redButton.style.backgroundColor = 'white'
+//      }
+//      if (color === 'Yellow') {
+//          yellowButton.style.backgroundColor = 'white'
+//      }
+//      if (color === 'Green') {
+//          greenButton.style.backgroundColor = 'white'
+//      }
+//      if (color === 'Blue') {
+//          blueButton.style.backgroundColor = 'white'
+//      }
+ 
+//      if (color === 'Gray') {
+//          grayButton.style.backgroundColor = 'white'
+//      }
+//      if (color === 'Purple') {
+//          purpleButton.style.backgroundColor = 'white'
+//      }
+//      if (color === 'Teal') {
+//          tealButton.style.backgroundColor = 'white'
+//      }
+//      if (color === 'Orange') {
+//          orangeButton.style.backgroundColor = 'white'
+//      }
+//  }
+ 
+//  //create a fucntion to reset the color to original color 
+//  function colorReset() {
+//      redButton.style.backgroundColor = 'red';
+//      greenButton.style.backgroundColor = 'green';
+//      yellowButton.style.backgroundColor = 'yellow';
+//      blueButton.style.backgroundColor = 'blue';
+//      grayButton.style.backgroundColor = 'gray';
+//      purpleButton.style.backgroundColor = 'purple';
+//      tealButton.style.backgroundColor = 'teal';
+//      orangeButton.style.backgroundColor = 'orange';
+//  }
+ 
