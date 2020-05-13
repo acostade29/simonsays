@@ -10,7 +10,43 @@ const messageInput = document.getElementById('inputMessage');
 const messageBtn = document.getElementById('messageButton');
 
 
-//to select colors of the panels once the game start and start button 
+// turn count  and start  //
+const turnCounter = document.querySelector("#turnCounter");
+const startBtn = document.querySelector("#start")
+const strictButton = document.querySelector("#strict")
+const onButton = document.querySelector('#onText')
+
+//strict Button 
+// strictButton.addEventListener('click', (event) => {
+// if (strictButton.checked == true) {
+// strict = true;
+// } else { 
+// strict = false;
+// }
+// });
+
+//start button
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 //event handler
@@ -35,7 +71,12 @@ let colorLookup ={
 
 
 //create a sequence [1,5,4,6,2,3,7,8,1];
- let arry = [1,2,3,4,5,6,7,8];
+ let arry = [1,2,3,4,5,6,7,8,
+    1,2,3,4,5,6,7,8,
+    1,2,3,4,5,6,7,8,
+    1,2,3,4,5,6,7,8,
+    1,2,3,4,5,6,7,8,
+    1,2,3,4,5,6,7,8];
 
  //the sequence is not random we need to shuffle with a shuffle function 
  let arrayshuffle = function(arr) {
@@ -129,9 +170,21 @@ function colorReset() {
 //create a render function that repeat everything. 
 
  
-for ( var K = 0; K < 30; K ++) {
-    flash()
-}
+
+
+
+
+//start button work in progresss keep working !
+
+// const startButton = document.querySelector("#start")
+
+// const startBtn = document.getElementById('startBtn');
+
+// startButton.addEventListener('click',(event) => {
+//     flash()
+        
+// });
+
 
 
 
