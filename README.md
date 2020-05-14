@@ -15,11 +15,11 @@
 | the game will be over once the sequence is not follow. |
 | there are 3 levels of dificulties: Easy, Medium, Hard numbers of buttons and time of memorization will be affected depending on the difficulty level| 
 
-
+***
 
 
 ### ***Technologies Used***
-![Technologies Used](images/Softwareused.png)
+<img src="images/Softwareused.png")
 
 
 
