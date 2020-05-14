@@ -1,3 +1,19 @@
+![Simon Game!](images /ARH Logo (1).png)
+### Date: 5/15/2020
+#### By: Alfonso D Rojas Hernandez 
+#### [GitHub](https://github.com/acostade29) | [LinkedIn](https://www.linkedin.com/in/alfonso-d-rojas-hernandez-2253a0105/) | 
+***
+
+
+
+
+
+
+
+
+
+
+
 # Simon-says-firts-project-
 #Drawings of the game.
 
