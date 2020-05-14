@@ -402,7 +402,7 @@ if (playerOrder.length == 3 && good ) { // if player order is equal to x number 
 // --------------------------------------------calling the loser  and strict mode------------------------------------------------------------------
 if (good == false) {
     flashColor();
-    turnCounter.innerHTML = "Loser!";
+    turnCounter.innerHTML = "Ha!!!!!! I GOT YOU! ";
     let audio = document.getElementById("Loser")
         audio.play();
     setTimeout (() =>  {
@@ -445,7 +445,7 @@ if(turn == playerOrder.length && good && !win) {
 // 12 ---------------------------------win game function with message in the counter -----------
 function winGame () {
     flashColor(); 
-        turnCounter.innerHTML ="Yay!";
+        turnCounter.innerHTML ="Yay! you are a winner baby!";
         on = false;
         win = true;  
         let audio = document.getElementById("Winner")

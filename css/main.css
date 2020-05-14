@@ -1,19 +1,19 @@
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 2048px) {
 
 body { 
-  background-image: url(https://thespinoff.co.nz/wp-content/uploads/2018/01/Wiki-background.png); 
+  background-image: url(https://www.desktopbackground.org/p/2012/06/16/406495_adventure-time-wallpapers_1366x784_h.png); 
   text-align: center;
   margin-top: 200px;
- 
+ background-size: cover;
 
 } }
 
 
 body { 
-    background-image: url(https://thespinoff.co.nz/wp-content/uploads/2018/01/Wiki-background.png);    
+    background-image: url(https://www.desktopbackground.org/p/2012/06/16/406495_adventure-time-wallpapers_1366x784_h.png);    
     text-align: center;
     margin-top: 200px;
-   
+    background-size: cover;
 
 }
 
@@ -23,6 +23,7 @@ body {
 
 h1{
   color: black;
+  font-family: 'Pacifico', cursive;
 }
 
 input {
@@ -31,7 +32,8 @@ input {
 
 
 #Circle-game {
-  background: #130f0f;
+  background-image: url(https://wallup.net/wp-content/uploads/2017/03/29/93469-Adventure_Time-cartoon-748x421.jpg);    
+  background-size: cover;
   border-radius: none;
   height: 380px;
   width: 450px;
@@ -55,6 +57,7 @@ input {
   color: black;
   margin-top:20px ;
   margin-left: 50px;
+  margin-right: 50px;
 }
 
 
