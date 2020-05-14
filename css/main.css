@@ -1,19 +1,19 @@
 @media only screen and (min-width: 1024px) {
 
 body { 
-  background-color: none;    
+  background-image: url(https://thespinoff.co.nz/wp-content/uploads/2018/01/Wiki-background.png); 
   text-align: center;
   margin-top: 200px;
-  background-color: gray;
+ 
 
 } }
 
 
 body { 
-    background-color: none;    
+    background-image: url(https://thespinoff.co.nz/wp-content/uploads/2018/01/Wiki-background.png);    
     text-align: center;
     margin-top: 200px;
-    background-color: gray;
+   
 
 }
 
@@ -22,7 +22,7 @@ body {
 
 
 h1{
-  color: whitesmoke;
+  color: black;
 }
 
 input {

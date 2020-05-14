@@ -27,8 +27,8 @@
 
 
 
-# Simon-says- initiation of the project
-#Drawings of the game.
+# Simon-says- initiation of the project (Drawings)
+
 <img src="images /IMG_1484.jpg">
 
 
@@ -49,7 +49,7 @@
 <img src="images /IMG_1486.jpg">
 
 
-## JS Structure game 
+## JS initial tought process of game 
 
 | Student will have to create in JS: |
 |---|
