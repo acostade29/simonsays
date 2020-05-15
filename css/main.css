@@ -17,6 +17,34 @@ body {
 
 }
 
+@media only screen and (min-width: 320px) {
+
+  body { 
+    background-image: url(https://www.desktopbackground.org/p/2012/06/16/406495_adventure-time-wallpapers_1366x784_h.png); 
+    text-align: center;
+    margin-top: 200px;
+   background-size: cover;
+  
+  } }
+  @media only screen and (min-width: 480px) {
+
+    body { 
+      background-image: url(https://www.desktopbackground.org/p/2012/06/16/406495_adventure-time-wallpapers_1366x784_h.png); 
+      text-align: center;
+      margin-top: 200px;
+     background-size: cover;
+    
+    } }
+
+    @media only screen and (min-width: 768px) {
+
+      body { 
+        background-image: url(https://www.desktopbackground.org/p/2012/06/16/406495_adventure-time-wallpapers_1366x784_h.png); 
+        text-align: center;
+        margin-top: 200px;
+       background-size: cover;
+      
+      } }
 
 
 
