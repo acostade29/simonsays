@@ -1,4 +1,3 @@
-
 //1--------------------------------------Message element -----------------------//
 
 // cached elements
@@ -11,7 +10,7 @@ const messageBtn = document.getElementById('messageButton');
 // defined message 
 //event handler
 // write a function that change the H1 TITLE to the name of the user once the included the name to Welcome + name
-messageBtn.addEventListener('click',function () {
+messageBtn.addEventListener('click', function () {
     messageEl.innerText = `Welcome ${messageInput.value}!`;
 })
 
@@ -23,7 +22,7 @@ messageBtn.addEventListener('click',function () {
 
 //2--------------------------------------variables-------------------------------//
 // define variables
-let order =[]; // keep track and order of the lights//
+let order = []; // keep track and order of the lights//
 let strict = false; // function that dont allow the player to repeat the sequeance and start over 
 let noice = true;
 let on = false;
@@ -72,35 +71,35 @@ const onButton = document.querySelector('#on')
 //if we check the button will be true and we use the strick to be equal true if not we wont be using  strick feature. 
 strictButton.addEventListener('click', (event) => {
     if (strictButton.checked == true) {
-   strict = true;
-   } else { 
-   strict = false;
-   }
-   });
-   
-   //On Button with Score setting 
-   //if the on button is on or check  the counter will be on 
-   onButton.addEventListener('click' , (event) => {
-       if (onButton.checked == true) {
-           on = true;
-           turnCounter.innerHTML = "-";
-       } else {
-           on = false;// if the counter is off no message 
-           turnCounter.innerHTML = "";
-           clearColor()// this will clear the colors if the game is playing 
-           clearInterval(intervalId);
-       }
-   });
-   
-   //start button 
-   
-   startBtn.addEventListener('click',(event) => {
-       //if the game is on or if there is a win we are going (call play function) to play//
-    if (on || win) {
-    play(); //play function will be the render and it will call below 
-    } 
+        strict = true;
+    } else {
+        strict = false;
+    }
 });
-   
+
+//On Button with Score setting 
+//if the on button is on or check  the counter will be on 
+onButton.addEventListener('click', (event) => {
+    if (onButton.checked == true) {
+        on = true;
+        turnCounter.innerHTML = "-";
+    } else {
+        on = false; // if the counter is off no message 
+        turnCounter.innerHTML = "";
+        clearColor() // this will clear the colors if the game is playing 
+        clearInterval(intervalId);
+    }
+});
+
+//start button 
+
+startBtn.addEventListener('click', (event) => {
+    //if the game is on or if there is a win we are going (call play function) to play//
+    if (on || win) {
+        play(); //play function will be the render and it will call below 
+    }
+});
+
 
 //---------------------------------------------------------------------------//
 
@@ -113,29 +112,29 @@ strictButton.addEventListener('click', (event) => {
 function play() {
     win = false; // we start without winning 
     order = []; // we start with zero order. 
-    playerOrder =[];
-    flash = 0;// no flashes 
+    playerOrder = [];
+    flash = 0; // no flashes 
     turn = 1; // this will be the firts round of the game 
     turnCounter.innerHTML = 1; // as soon as we play the counter is going to turn one 
     good = true; // the player has not hit any  incorrect.
 
 
 
-// we need to create a for loop in the function to determine the numbers of the game  which it have to be in random numbers //
+    // we need to create a for loop in the function to determine the numbers of the game  which it have to be in random numbers //
 
 
-for (var i = 0; i < 10; i++) {  // this will determine the number of the round of the game starting with i as a 0  but the  max number of round is 10. Also I is increasing  
+    for (var i = 0; i < 10; i++) { // this will determine the number of the round of the game starting with i as a 0  but the  max number of round is 10. Also I is increasing  
 
-order.push(Math.floor(Math.random() * 8) + 1) //get a random number 1-8 or 8 colors 
+        order.push(Math.floor(Math.random() * 8) + 1) //get a random number 1-8 or 8 colors 
+    }
+
+
+    compTurn = true; // we start with the computers turn 
+    intervalId = setInterval(gameTurn, 800) // this fuction will the help the determine the flashing withing a certain (800) amount of seconds 
+    // interval id will be call below 
 }
+//-----------------------------------------------------------------------------------------------------------------------------//  
 
-
-compTurn = true;// we start with the computers turn 
-intervalId = setInterval(gameTurn, 800)  // this fuction will the help the determine the flashing withing a certain (800) amount of seconds 
-// interval id will be call below 
-}
- //-----------------------------------------------------------------------------------------------------------------------------//  
-  
 
 
 
@@ -148,25 +147,25 @@ intervalId = setInterval(gameTurn, 800)  // this fuction will the help the deter
 
 function gameTurn() {
     on = false; // this will help to the player to NOT turn or click any buttons 
-if (flash == turn) { // if flash equal turn  it will be turn of the next one and the computer turn is over . 
-    clearInterval(intervalId);
-    compTurn = false; 
-    clearColor;
-    on = true; // the player will be able to play and touch a button 
-}
-   if (compTurn) {
-       clearColor();
-       setTimeout(() => { // this is similar to interval but it will stop after an amount of seconds
-if (order[flash] == 1) one();// if the first order is one or up to eight  this will flash. functions  from one to eight will be defined below. 
-if (order[flash] == 2) two(); 
-if (order[flash] == 3) three();
-if (order[flash] == 4) four();
-if (order[flash] == 5) five();
-if (order[flash] == 6) six();
-if (order[flash] == 7) seven();
-if (order[flash] == 8) eight();
-flash++; // the computer turn this will make the buttons flash one by one   with an timeout of 200 miliseconds 
-       }, 200);
+    if (flash == turn) { // if flash equal turn  it will be turn of the next one and the computer turn is over . 
+        clearInterval(intervalId);
+        compTurn = false;
+        clearColor;
+        on = true; // the player will be able to play and touch a button 
+    }
+    if (compTurn) {
+        clearColor();
+        setTimeout(() => { // this is similar to interval but it will stop after an amount of seconds
+            if (order[flash] == 1) one(); // if the first order is one or up to eight  this will flash. functions  from one to eight will be defined below. 
+            if (order[flash] == 2) two();
+            if (order[flash] == 3) three();
+            if (order[flash] == 4) four();
+            if (order[flash] == 5) five();
+            if (order[flash] == 6) six();
+            if (order[flash] == 7) seven();
+            if (order[flash] == 8) eight();
+            flash++; // the computer turn this will make the buttons flash one by one   with an timeout of 200 miliseconds 
+        }, 200);
     }
 }
 //--------------------------------------------------------------------------------------------------------------------//
@@ -174,9 +173,9 @@ flash++; // the computer turn this will make the buttons flash one by one   with
 
 
 
- //7 -----------------------------clear color function to be define initial color for the clear back & flash function  -------------------------------
- function clearColor() { 
-    redButton.style.backgroundColor = "red" ;
+//7 -----------------------------clear color function to be define initial color for the clear back & flash function  -------------------------------
+function clearColor() {
+    redButton.style.backgroundColor = "red";
     yellowButton.style.backgroundColor = "yellow";
     blueButton.style.backgroundColor = "blue";
     greenButton.style.backgroundColor = "green";
@@ -188,8 +187,8 @@ flash++; // the computer turn this will make the buttons flash one by one   with
 
 
 // flash color function 
-function flashColor() { 
-    redButton.style.backgroundColor = "white" ;
+function flashColor() {
+    redButton.style.backgroundColor = "white";
     yellowButton.style.backgroundColor = "white";
     blueButton.style.backgroundColor = "white";
     greenButton.style.backgroundColor = "white";
@@ -214,6 +213,7 @@ function one() {
     noise = true;
     redButton.style.backgroundColor = "white";
 };
+
 function two() {
     if (noice) {
         let audio = document.getElementById("clickTurn")
@@ -222,6 +222,7 @@ function two() {
     noise = true;
     yellowButton.style.backgroundColor = "white";
 };
+
 function three() {
     if (noice) {
         let audio = document.getElementById("clickTurn")
@@ -230,6 +231,7 @@ function three() {
     noise = true;
     blueButton.style.backgroundColor = "white";
 };
+
 function four() {
     if (noice) {
         let audio = document.getElementById("clickTurn")
@@ -238,6 +240,7 @@ function four() {
     noise = true;
     greenButton.style.backgroundColor = "white";
 };
+
 function five() {
     if (noice) {
         let audio = document.getElementById("clickTurn")
@@ -246,6 +249,7 @@ function five() {
     noise = true;
     purpleButton.style.backgroundColor = "white";
 };
+
 function six() {
     if (noice) {
         let audio = document.getElementById("clickTurn")
@@ -254,6 +258,7 @@ function six() {
     noise = true;
     grayButton.style.backgroundColor = "white";
 };
+
 function seven() {
     if (noice) {
         let audio = document.getElementById("clickTurn")
@@ -262,6 +267,7 @@ function seven() {
     noise = true;
     orangeButton.style.backgroundColor = "white";
 };
+
 function eight() {
     if (noice) {
         let audio = document.getElementById("clickTurn")
@@ -275,108 +281,108 @@ function eight() {
 
 // 9 ---------------------------add event listener---------------------------------------------//
 // this will determine if the console is on and is the players turn, the user can press a button 
-redButton.addEventListener('click',(event) => {
+redButton.addEventListener('click', (event) => {
     if (on) {
-        playerOrder.push(1);// player can push one on the player order. 
-        check();// this will check is the player is correct 
+        playerOrder.push(1); // player can push one on the player order. 
+        check(); // this will check is the player is correct 
         one();
-        if(!win) { // if the players win set a time out and clear the color after x amound of seconds 
+        if (!win) { // if the players win set a time out and clear the color after x amound of seconds 
             setTimeout(() => {
                 clearColor();
             }, 300);
         }
-    }       
-});        
-yellowButton.addEventListener('click',(event) => {
+    }
+});
+yellowButton.addEventListener('click', (event) => {
     if (on) {
         playerOrder.push(2);
         check();
         two();
-        if(!win) {
-            setTimeout(( ) => {
+        if (!win) {
+            setTimeout(() => {
                 clearColor();
             }, 300);
         }
-    }       
-});    
+    }
+});
 
-blueButton.addEventListener('click',(event) => {
+blueButton.addEventListener('click', (event) => {
     if (on) {
         playerOrder.push(3);
         check();
         three();
-        if(!win) {
-            setTimeout(( ) => {
+        if (!win) {
+            setTimeout(() => {
                 clearColor();
             }, 300);
         }
-    }       
-});    
+    }
+});
 
-greenButton.addEventListener('click',(event) => {
+greenButton.addEventListener('click', (event) => {
     if (on) {
         playerOrder.push(4);
         check();
         four();
-        if(!win) {
-            setTimeout(( ) => {
+        if (!win) {
+            setTimeout(() => {
                 clearColor();
             }, 300);
         }
-    }       
-});    
+    }
+});
 
-purpleButton.addEventListener('click',(event) => {
+purpleButton.addEventListener('click', (event) => {
     if (on) {
         playerOrder.push(5);
         check();
         five();
-        if(!win) {
-            setTimeout(( ) => {
+        if (!win) {
+            setTimeout(() => {
                 clearColor();
             }, 300);
         }
-    }       
-});    
+    }
+});
 
-grayButton.addEventListener('click',(event) => {
+grayButton.addEventListener('click', (event) => {
     if (on) {
         playerOrder.push(6);
         check();
         six();
-        if(!win) {
-            setTimeout(( ) => {
+        if (!win) {
+            setTimeout(() => {
                 clearColor();
             }, 300);
         }
-    }       
-});    
+    }
+});
 
-orangeButton.addEventListener('click',(event) => {
+orangeButton.addEventListener('click', (event) => {
     if (on) {
         playerOrder.push(7);
         check();
         seven();
-        if(!win) {
-            setTimeout(( ) => {
+        if (!win) {
+            setTimeout(() => {
                 clearColor();
             }, 300);
         }
-    }       
-});    
+    }
+});
 
-tealButton.addEventListener('click',(event) => {
+tealButton.addEventListener('click', (event) => {
     if (on) {
         playerOrder.push(8);
         check();
         eight();
-        if(!win) {
-            setTimeout(( ) => {
+        if (!win) {
+            setTimeout(() => {
                 clearColor();
             }, 300);
         }
-    }       
-});    
+    }
+});
 
 
 // Function check is below 
@@ -388,51 +394,51 @@ tealButton.addEventListener('click',(event) => {
 //  11---------------------------------------Function Check Function and calling a winner function ------------------------------
 
 function check() { // if the player order is not the same as the player order 
-    if ( playerOrder[playerOrder.length - 1] !== order[playerOrder.length -1]) 
-    good = false; // the player is not correct 
+    if (playerOrder[playerOrder.length - 1] !== order[playerOrder.length - 1])
+        good = false; // the player is not correct 
 
-if (playerOrder.length == 3 && good ) { // if player order is equal to x number of rounds  so is correct or call the win function 
-    winGame();
-}
+    if (playerOrder.length == 3 && good) { // if player order is equal to x number of rounds  so is correct or call the win function 
+        winGame();
+    }
 
-//--------------------------------------------------------------------------------------------------------------------------------
+    //--------------------------------------------------------------------------------------------------------------------------------
 
 
 
-// --------------------------------------------calling the loser  and strict mode------------------------------------------------------------------
-if (good == false) {
-    flashColor();
-    turnCounter.innerHTML = "Ha!!!!!! I GOT YOU! ";
-    let audio = document.getElementById("Loser")
+    // --------------------------------------------calling the loser  and strict mode------------------------------------------------------------------
+    if (good == false) {
+        flashColor();
+        turnCounter.innerHTML = "Ha!!!!!! I GOT YOU! ";
+        let audio = document.getElementById("Loser")
         audio.play();
-    setTimeout (() =>  {
-        turnCounter.innerHTML = turn;
-        clearColor();
- // -----------------------------------render ---------strict mode will make the user start from the beginning --------------------------
-    if(strict) {
-        play();
-    } else {
+        setTimeout(() => {
+            turnCounter.innerHTML = turn;
+            clearColor();
+            // -----------------------------------render ---------strict mode will make the user start from the beginning --------------------------
+            if (strict) {
+                play();
+            } else {
+                compTurn = true;
+                flash = 0;
+                playerOrder = [];
+                good = true;
+                intervalId = setInterval(gameTurn, 800);
+            }
+        }, 800);
+        noise = false;
+    }
+
+
+
+    //---------------------------render  ------------if the player wins  to turn to the next  turn --------------------------
+    if (turn == playerOrder.length && good && !win) {
+        turn++;
+        playerOrder = [];
         compTurn = true;
         flash = 0;
-        playerOrder = [];
-        good = true;
-        intervalId = setInterval(gameTurn, 800);
+        turnCounter.innerHTML = turn;
+        intervalId = setInterval(gameTurn, 800)
     }
-}, 800);
-noise = false;
-}
-
-
-
-//---------------------------render  ------------if the player wins  to turn to the next  turn --------------------------
-if(turn == playerOrder.length && good && !win) {
-    turn ++;
-    playerOrder = [];
-    compTurn = true;
-    flash =0 ;
-    turnCounter.innerHTML = turn;
-    intervalId = setInterval( gameTurn, 800)
-}
 };
 //----------------------------------------------------------------------------------
 
@@ -443,20 +449,20 @@ if(turn == playerOrder.length && good && !win) {
 
 
 // 12 ---------------------------------win game function with message in the counter -----------
-function winGame () {
-    flashColor(); 
-        turnCounter.innerHTML ="Yay! you are a winner baby!";
-        on = false;
-        win = true;  
-        let audio = document.getElementById("Winner")
-        audio.play();
-    };
+function winGame() {
+    flashColor();
+    turnCounter.innerHTML = "Yay! you are a winner baby!";
+    on = false;
+    win = true;
+    let audio = document.getElementById("Winner")
+    audio.play();
+};
 
 //-----------------------------------------------------------------------------------------------
 
 
 
- 
+
 
 
 
@@ -513,7 +519,7 @@ function winGame () {
 //     return arr;
 //  };
 
- 
+
 //  var newSquence = arrayshuffle(arry);
 // //give the flash a background color of white 
 
@@ -531,7 +537,7 @@ function winGame () {
 //      if (color === 'Blue') {
 //          blueButton.style.backgroundColor = 'white'
 //      }
- 
+
 //      if (color === 'Gray') {
 //          grayButton.style.backgroundColor = 'white'
 //      }
@@ -545,7 +551,7 @@ function winGame () {
 //          orangeButton.style.backgroundColor = 'white'
 //      }
 //  }
- 
+
 //  //create a fucntion to reset the color to original color 
 //  function colorReset() {
 //      redButton.style.backgroundColor = 'red';
