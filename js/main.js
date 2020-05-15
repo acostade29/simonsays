@@ -433,7 +433,7 @@ if(turn == playerOrder.length && good && !win) {
     turnCounter.innerHTML = turn;
     intervalId = setInterval( gameTurn, 800)
 }
-}
+};
 //----------------------------------------------------------------------------------
 
 
@@ -450,7 +450,7 @@ function winGame () {
         win = true;  
         let audio = document.getElementById("Winner")
         audio.play();
-    }
+    };
 
 //-----------------------------------------------------------------------------------------------
 
